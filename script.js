@@ -1,24 +1,3 @@
-let fillInShiftsMessage = "";
-let isFillIn = true;
-
-document
-  .getElementById("fillInShiftsButton")
-  .addEventListener("click", function () {
-    isFillIn = true;
-    fillInShiftsMessage =
-      "THESE ARE FILL IN SHIFTS ONLY FOR THE DATES SPECIFIED ABOVE.";
-    updateFillInShiftsMessage();
-    document.getElementById("fillInDatesLabel").innerText = "Fill-In Dates:";
-  });
-
-document.getElementById("onGoingButton").addEventListener("click", function () {
-  isFillIn = false;
-  fillInShiftsMessage =
-    "THIS IS AN ONGOING SCHEDULE WHICH MEANS THAT THIS WILL BE YOUR REGULAR SCHEDULE EVERY WEEK.";
-  updateFillInShiftsMessage();
-  document.getElementById("fillInDatesLabel").innerText = "On-Going Dates:";
-});
-
 document
   .getElementById("generateButton")
   .addEventListener("click", function () {
@@ -37,7 +16,7 @@ document
     const message = `
       <p>Hi <span class="recipient">${recipient}</span>,</p> 
 
-      <p>This is a confirmation of the <span class="shiftDetails">${shiftDetails}</span> you have accepted. Thank you for accepting the shift.</p>
+      <p>This is a confirmation of the Fill-In <span class="shiftDetails">${shiftDetails}</span> shift you have accepted. Thank you for accepting the shift.</p>
 
       <p>Below are the details:<br>
 
@@ -53,13 +32,11 @@ document
 
       <p><span class="n"><strong>Notes:</strong></span> <span class="notes">${notes}</span></p>
 
-      <p><strong>${
-        isFillIn ? "FILL IN DATES:" : "DATES:"
-      }</strong> <span class="fillInDates">${fillInDates}<br></span>
+      <p><strong>Date:</strong> <span class="fillInDates">${fillInDates}<br></span>
 
-      <strong>TIME:</strong> <span class="time">${startTime} - ${endTime}</span></p>
+      <strong>Time:</strong> <span class="time">${startTime} - ${endTime}</span></p>
 
-      <p class="confirm" id="fillInShiftsMessage">${fillInShiftsMessage}</p>
+      <p class="confirm" id="fillInShiftsMessage"></p>
 
       <p><span class="imp"><strong>IMPORTANT:</strong></span> PLEASE DO NOT BRING YOUR PERSONAL ELECTRONICS (LAPTOP, TABLET, IPAD). ALSO PLEASE KEEP IN MIND TO NEVER BE ON SOCIAL MEDIA OR LIVE-STREAMING.</p>
 
@@ -79,6 +56,8 @@ document
       3. For Care related issues, please call or email the Case Manager<br>
 
       <span class="caseManager">${caseManager}</span><br>
+      4.  FOR OVERNIGHT AWAKE SHIFTS – Paid hourly: <span class="confirm">Need to STAY AWAKE for the
+           duration of the shift to monitor the client's condition.</span>
 
       <p class="clear">Clear Care Notification is an auto-generated REMINDER of a shift scheduled for the next day. DO NOT REPLY or leave messages. Call the Office: 778-279-3634.</p>
 
