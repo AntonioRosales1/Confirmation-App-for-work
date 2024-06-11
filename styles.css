@@ -1,0 +1,119 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+form {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+button {
+  background-color: #008cba;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  display: block;
+}
+
+button:hover {
+  background-color: #005f5f;
+}
+
+#templateOutput {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  font-size: 16px;
+}
+
+.recipient {
+  color: black;
+  font-weight: bold;
+}
+
+.shiftDetails {
+  color: black;
+  font-weight: bold;
+}
+
+.clientName {
+  color: red;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.addressAndTravelTime {
+  color: black;
+  background-color: yellow;
+  font-weight: bold;
+}
+
+.notes {
+  color: black;
+  /* background-color: red; */
+  font-weight: bold;
+}
+
+.fillInDates {
+  color: black;
+  background-color: yellow;
+  font-weight: bold;
+}
+
+.time {
+  color: black;
+  background-color: yellow;
+  font-weight: bold;
+}
+
+.caseManager {
+  color: black;
+  font-weight: bold;
+}
+.important {
+  background-color: yellow;
+}
+.confirm {
+  color: red;
+}
+.n {
+  background-color: lightblue;
+}
+.clear {
+  color: #008cba;
+}
+/* Add more styles as needed */

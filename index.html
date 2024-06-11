@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirmation Email</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Confirmation Email Template</h1>
+    <form id="emailForm">
+      <label for="recipient">Recipient Name:</label>
+      <input type="text" id="recipient" name="recipient" /><br /><br />
+
+      <label for="shiftDetails">Shift Details:</label>
+      <input type="text" id="shiftDetails" name="shiftDetails" /><br /><br />
+
+      <label for="clientName">Client Name:</label>
+      <input type="text" id="clientName" name="clientName" /><br /><br />
+
+      <label for="addressAndTravelTime">Address and Travel Time:</label>
+      <input
+        type="text"
+        id="addressAndTravelTime"
+        name="addressAndTravelTime"
+      /><br /><br />
+
+      <label for="notes">Notes:</label>
+      <input type="text" id="notes" name="notes" /><br /><br />
+
+      <label for="fillInDates">Fill-In Dates:</label>
+      <input type="text" id="fillInDates" name="fillInDates" /><br /><br />
+
+      <label for="time">Time:</label>
+      <input type="text" id="time" name="time" /><br /><br />
+
+      <label for="caseManager">Case Manager Name and Contact:</label>
+      <input type="text" id="caseManager" name="caseManager" /><br /><br />
+
+      <button type="button" id="generateButton">Generate Email</button>
+    </form>
+
+    <div id="templateOutput"></div>
+    <button id="copyButton" style="display: none">Copy to Clipboard</button>
+
+    <script>
+      document
+        .getElementById("generateButton")
+        .addEventListener("click", function () {
+          const recipient = document.getElementById("recipient").value;
+          const shiftDetails = document.getElementById("shiftDetails").value;
+          const clientName = document.getElementById("clientName").value;
+          const addressAndTravelTime = document.getElementById(
+            "addressAndTravelTime"
+          ).value;
+          const notes = document.getElementById("notes").value;
+          const fillInDates = document.getElementById("fillInDates").value;
+          const time = document.getElementById("time").value;
+          const caseManager = document.getElementById("caseManager").value;
+
+          const message = `
+                <p>Hi <span class="recipient">${recipient}</span>,</p> 
+
+                <p>This is a Confirmation of the <span class="shiftDetails">${shiftDetails}</span> you have accepted. Thank you for accepting the shift.</p>  
+
+                <p>Below are the details:</p>
+
+                <p class="confirm"><strong>Please email back ASAP to confirm/acknowledge acceptance of the shift assigned.</p> 
+
+                <p class="important"><strong>PLEASE DO NOT LEAVE THE CLIENT ALONE. PLEASE WAIT FOR THE NEXT PERSON TO ARRIVE. ALWAYS BE ON TIME FOR YOUR SHIFT.</strong></p>
+
+                <p><strong>Name of Client:</strong> <span class="clientName">${clientName}</span></p>
+
+                <p class="confirm"><strong>PLEASE CHECK THE ADDRESS AND TRAVEL TIME BEFORE YOUR FIRST SHIFT.</strong></p>
+
+                <p><span class="addressAndTravelTime">${addressAndTravelTime}</span></p>
+
+                <p class="n"><strong>Notes:</strong> <span class="notes">${notes}</span></p>
+
+                <p><strong>FILL IN DATES:</strong> <span class="fillInDates">${fillInDates}</span></p>
+
+                <p><strong>TIME:</strong> <span class="time">${time}</span></p>
+
+                <p>THESE ARE FILL IN SHIFTS ONLY FOR THE DATES SPECIFIED ABOVE.</p>
+
+                <p><strong>IMPORTANT:</strong> PLEASE DO NOT BRING YOUR PERSONAL ELECTRONICS (LAPTOP, TABLET, IPAD). ALSO PLEASE KEEP IN MIND TO NEVER BE ON SOCIAL MEDIA OR LIVE-STREAMING.</p>
+
+                <p>Please refer to the ATTACHMENT for SYNOPSIS or CARE PLAN.</p>
+
+                <p>Reminders: <strong class="confirm">ALWAYS BE ON TIME.</strong></p>
+
+                <p>1. Please read the attachments thoroughly before your shift.</p>
+                <p>2. CLOCK IN AND CLOCK OUT, use CAREGIVER APP.</p>
+
+                <p class="n">Make sure that you have Downloaded the CAREGIVER APP in your phone.</p>
+
+                <p>Please call the office 778-279-3634 if you are running late before the shift starts.</p>
+
+                <p class="confirm"><strong>PLEASE REFRAIN FROM USING YOUR CELL PHONE WHILE ON A SHIFT.</strong></p>
+
+                <p>3. For Care related issues, please call or email the Case Manager</p>
+
+                <p><span class="caseManager">${caseManager}</span></p>
+
+                <p class="clear">Clear Care Notification is an auto-generated REMINDER of a shift scheduled for the next day. DO NOT REPLY or leave messages. Call the Office: 778-279-3634.</p>
+
+                <p>Thank you again and best of luck on your shift.</p>
+                <p>Please email us back to confirm that you got this email.</p>
+            `;
+
+          document.getElementById("templateOutput").innerHTML = message;
+          document.getElementById("copyButton").style.display = "inline-block";
+        });
+
+      document
+        .getElementById("copyButton")
+        .addEventListener("click", function () {
+          const templateOutput = document.getElementById("templateOutput");
+          const range = document.createRange();
+          range.selectNodeContents(templateOutput);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+
+          try {
+            document.execCommand("copy");
+            alert("Email template copied to clipboard.");
+          } catch (err) {
+            alert("Unable to copy. Please try again.");
+          }
+
+          selection.removeAllRanges();
+        });
+    </script>
+  </body>
+</html>
