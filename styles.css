@@ -2,8 +2,10 @@
 
 body {
   font-family: Arial, sans-serif;
+  color: #333;
+  font-size: 15px;
+  font-weight: 600;
   background-color: #f4f4f4;
-  /* text-align: center; */
   margin: 0;
   padding: 20px;
 }
@@ -42,9 +44,10 @@ button {
   border: none;
   cursor: pointer;
   font-size: 16px;
-  width: 100%;
+  width: 50%;
+  border-radius: 5px;
   max-width: 600px;
-  margin: auto;
+  margin: 5px auto;
   display: block;
 }
 
@@ -74,8 +77,8 @@ button:hover {
 }
 
 .clientName {
-  color: red;
-  font-size: 28px;
+  color: rgb(0, 81, 255);
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -112,15 +115,25 @@ button:hover {
 }
 .confirm {
   color: red;
+  font-weight: bold;
 }
 .n {
-  background-color: lightblue;
+  background-color: rgb(39, 199, 221);
 }
 .clear {
   color: #008cba;
 }
 .copyButton {
+  margin: auto;
+  width: 250px;
   text-align: center;
   color: black;
+  background-color: lightblue;
+}
+.imp {
+  background-color: rgb(235, 116, 235);
+}
+.blue {
+  color: blue;
 }
 /* Add more styles as needed */
