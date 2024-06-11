@@ -73,7 +73,7 @@ document
 
         <strong>TIME:</strong> <span class="time">${startTime} - ${endTime}</span></p>
 
-        <p class="confirm">THESE ARE FILL IN SHIFTS ONLY FOR THE DATES SPECIFIED ABOVE.</p>
+        
 
         <p><span class="imp"><strong>IMPORTANT:</strong></span> PLEASE DO NOT BRING YOUR PERSONAL ELECTRONICS (LAPTOP, TABLET, IPAD). ALSO PLEASE KEEP IN MIND TO NEVER BE ON SOCIAL MEDIA OR LIVE-STREAMING.</p>
 
