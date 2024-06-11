@@ -32,9 +32,9 @@ document
 
       <p><span class="n"><strong>Notes:</strong></span> <span class="notes">${notes}</span></p>
 
-      <p><strong>Date:</strong> <span class="fillInDates">${fillInDates}<br></span>
+      <p><strong>FILL-IN Date:</strong> <span class="fillInDates">${fillInDates}<br></span>
 
-      <strong>FILL IN Time:</strong> <span class="time">${startTime} - ${endTime}</span></p>
+      <strong>Time:</strong> <span class="time">${startTime} - ${endTime}</span></p>
 
       <p class="confirm" id="fillInShiftsMessage"></p>
 
