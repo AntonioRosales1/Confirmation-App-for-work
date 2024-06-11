@@ -69,7 +69,8 @@ button {
 }
 
 button:hover {
-  background-color: #005f5f;
+  background-color: rgb(48, 43, 43);
+  color: yellow;
 }
 
 #templateOutput {
