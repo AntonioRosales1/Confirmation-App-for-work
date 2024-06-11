@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>End of Service Notification</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html" id="confirmationLink">Confirmation</a>
+        </li>
+        <li><a href="EOS.html" id="eosLink">EOS</a></li>
+      </ul>
+    </nav>
+
+    <h1 class="title">End of Service Notification</h1>
+    <form id="eosForm">
+      <label for="eosTeamName">Team Name:</label>
+      <input type="text" id="eosTeamName" name="eosTeamName" /><br />
+
+      <label for="eosClientName">Client Name:</label>
+      <input type="text" id="eosClientName" name="eosClientName" /><br />
+
+      <label for="eosEffectivityDate">Effectivity Date:</label>
+      <input
+        type="text"
+        id="eosEffectivityDate"
+        name="eosEffectivityDate"
+        class="date-picker"
+      /><br />
+
+      <label for="reason">Reason:</label>
+      <input type="text" id="reason" name="reason" /><br />
+
+      <input type="button" id="generateEosEmail" value="Generate EOS Email" />
+    </form>
+
+    <div id="eosEmailOutput"></div>
+    <button class="copyButton" id="copy" style="display: none">Copy</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="EOS.js"></script>
+  </body>
+</html>

@@ -4,14 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Confirmation Email</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
     />
   </head>
   <body>
-    <h1 class="title">The Key Confirmation</h1>
+    <nav>
+      <ul>
+        <li><a href="./index.html" id="confirmationLink">Confirmation</a></li>
+        <li><a href="./EOS.html" id="eosLink">EOS</a></li>
+      </ul>
+    </nav>
+    <h1 class="title">Shift Confirmation</h1>
     <form id="emailForm">
       <label for="recipient">Caregiver Name:</label>
       <input type="text" id="recipient" name="recipient" /><br />
@@ -36,11 +42,13 @@
       <input type="text" id="fillInDates" name="fillInDates" /><br />
 
       <label for="startTime">Start Time:</label>
-      <select id="startTime" name="startTime"></select
+      <select id="startTime" name="startTime">
+        <!-- Time slots here --></select
       ><br />
 
       <label for="endTime">End Time:</label>
-      <select id="endTime" name="endTime"></select
+      <select id="endTime" name="endTime">
+        <!-- Time slots here --></select
       ><br />
 
       <label for="caseManager">Case Manager Name and Contact:</label>
