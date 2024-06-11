@@ -69,7 +69,7 @@ document
 
         <p ><span class="n""><strong>Notes:</strong></span> <span class="notes">${notes}</span></p>
 
-        <p><strong>FILL IN DATES:</strong> <span class="fillInDates">${fillInDates}<br></span>
+        <p><strong>DATES:</strong> <span class="fillInDates">${fillInDates}<br></span>
 
         <strong>TIME:</strong> <span class="time">${startTime} - ${endTime}</span></p>
 

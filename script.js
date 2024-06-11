@@ -34,7 +34,7 @@ document
 
       <p><strong>Date:</strong> <span class="fillInDates">${fillInDates}<br></span>
 
-      <strong>Time:</strong> <span class="time">${startTime} - ${endTime}</span></p>
+      <strong>FILL IN Time:</strong> <span class="time">${startTime} - ${endTime}</span></p>
 
       <p class="confirm" id="fillInShiftsMessage"></p>
 
