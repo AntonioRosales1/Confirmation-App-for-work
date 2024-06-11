@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Confirmation Email</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
   </head>
   <body>
     <h1 class="title">The Key Confirmation</h1>
@@ -28,18 +32,22 @@
       <label for="notes">Notes:</label>
       <input type="text" id="notes" name="notes" /><br />
 
-      <label id="fillInDatesLabel" for="fillInDates">Fill-In Dates:</label>
-      <input type="text" id="fillInDates" name="fillInDates" />
-      <br />
+      <label id="fillInDatesLabel" for="fillInDates">Dates:</label>
+      <input type="text" id="fillInDates" name="fillInDates" /><br />
 
-      <label for="time">Time:</label>
-      <input type="text" id="time" name="time" /><br />
+      <label for="startTime">Start Time:</label>
+      <select id="startTime" name="startTime"></select
+      ><br />
+
+      <label for="endTime">End Time:</label>
+      <select id="endTime" name="endTime"></select
+      ><br />
 
       <label for="caseManager">Case Manager Name and Contact:</label>
       <input type="text" id="caseManager" name="caseManager" /><br />
+
       <button type="button" id="fillInShiftsButton">Fill-In</button>
       <button type="button" id="onGoingButton">On Going</button>
-
       <button type="button" id="generateButton">Create Confirmation</button>
     </form>
 
@@ -48,6 +56,7 @@
       Copy
     </button>
 
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="script.js"></script>
   </body>
 </html>
